@@ -1,0 +1,25 @@
+@require '$colors.styl'
+@require 'home.styl'
+
+body
+  height auto
+  min-height calc(100vh - 20px)
+  width 100%
+  min-width 1024px
+  color white
+  background-color black
+  font-family Raleway
+  a,a:visited,a:hover,a:active
+    color white
+    text-decoration none
+  header
+    display flex
+    .top-left
+      margin 0 15px
+    .top-navigation
+      margin 0 15px 0 auto
+  footer
+    margin 0
+
+
+@require 'components/*'

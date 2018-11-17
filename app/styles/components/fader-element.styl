@@ -1,0 +1,31 @@
+@keyframes fader-animate {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-o-keyframes fader-animate{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes fader-animate{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes fader-animate{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+
+$duration = 3s
+
+.fader
+  font-size 40px
+  color gray
+  margin 0 15px
+  -webkit-animation: fader-animate $duration infinite
+  -moz-animation: fader-animate $duration infinite
+  -o-animation: fader-animate $duration infinite
+  animation: fader-animate $duration infinite

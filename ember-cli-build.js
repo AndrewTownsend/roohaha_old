@@ -3,7 +3,14 @@
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
-  let app = new EmberApp(defaults, {
+  var opts = {
+    stylusOptions: {
+      outputFile: '/stylesheets/app.css',
+      includePaths: ['app/styles']
+    }
+  }
+
+  let app = new EmberApp(defaults, opts, {
     // Add options here
   });
 
