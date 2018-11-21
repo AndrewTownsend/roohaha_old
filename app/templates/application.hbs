@@ -1,17 +1,22 @@
-<head>
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-</head>
-<header>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#nav').localScroll({duration:800});
+});
+</script>
+<header id="nav">
   <div class="top-left">
     {{#link-to "home" class=""}}RooHaha.com{{/link-to}}
   </div>
   <div class="top-navigation">
-    {{#link-to "home" class=""}}Home{{/link-to}}
+    {{scrolling-link target=".home" text="Home"}}
+    {{scrolling-link target=".about-wrapper" text="About"}}
+    {{scrolling-link target=".projects" text="Projects"}}
   </div>
 </header>
 <div class="main-content">
-  {{outlet}}
+  {{!--outlet--}}
+  {{home-screen}}
+  {{about-screen}}
+  {{projects-screen}}
 </div>
-<footer>
-
-</footer>
+<footer></footer>

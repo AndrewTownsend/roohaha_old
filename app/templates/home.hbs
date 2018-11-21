@@ -1,9 +1,15 @@
 <div class="home">
-  <h1>Hello</h1>
-  <h2>My name is Andrew 'roo' Townsend</h2>
+  <h1>Hey, I'm Andrew 'roo' Townsend</h1>
+  <h2>and I'm a</h2>
   <span class="faders">
     {{#each faders as |fader|}}
       {{fader-element text=fader.text delay=fader.delay}}
     {{/each}}
   </span>
+  <div class="social-networks">
+    <span class="social-network"><a href="https://www.facebook.com/roosif"><i class="fab fa-facebook" /> facebook</a></span>
+    <span class="social-network"><a href="https://www.linkedin.com/in/andrew-townsend-6876836/"><i class="fab fa-linkedin" /> linked in</a></span>
+    <span class="social-network"><a href="https://www.instagram.com/r00sif/"><i class="fab fa-instagram" /> instagram</a></span>
+    <span class="social-network"><a href="https://github.com/AndrewTownsend"><i class="fas fa-code-branch" /> github</a></span>
+  </div>
 </div>

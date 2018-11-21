@@ -1,4 +1,6 @@
 import Component from '@ember/component';
+import { computed } from '@ember/object';
+import { htmlSafe } from '@ember/string';
 
 export default Component.extend({
   classNames: ['fader'],
@@ -9,7 +11,7 @@ export default Component.extend({
   text: '', // passed in
   delay: '0s', //passed in
 
-  delayStyle: Ember.computed('delay', function() {
-    return `animation-delay:${this.get('delay')}`;
+  delayStyle: computed('delay', function() {
+    return htmlSafe(`animation-delay:${this.get('delay')}`);
   })
 });

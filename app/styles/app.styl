@@ -1,25 +1,50 @@
-@require '$colors.styl'
-@require 'home.styl'
+@require "$colors.styl"
+
+$header-height = 30px
 
 body
-  height auto
+  height 100%
   min-height calc(100vh - 20px)
   width 100%
   min-width 1024px
   color white
-  background-color black
+  background-color $main-bg
+  background-image linear-gradient($main-bg-default, $main-bg)
   font-family Raleway
+  margin-bottom auto
   a,a:visited,a:hover,a:active
     color white
     text-decoration none
+    margin-right 15px
   header
+    position sticky
+    top 0
     display flex
+    align-items center
+    height 30px
+    background-color black
     .top-left
       margin 0 15px
     .top-navigation
       margin 0 15px 0 auto
   footer
-    margin 0
+    bottom 0
+  .main-content
+    height 100%
+    min-height calc(100% - 30px)
+
+  a:empty, a:visited, a:active
+    color #db0000
+    text-decoration none
+  a:hover
+    color white
+    text-decoration underline
+
+  .alt-screen
+    color black
+    background-color $alt-bg
+    background-image linear-gradient($alt-bg-default, $alt-bg)
 
 
 @require 'components/*'
+
