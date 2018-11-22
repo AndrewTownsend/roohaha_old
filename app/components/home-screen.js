@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-  classNames: ['home'],
+  classNames: ['screen', 'home'],
 
   faders: [
     {text: 'developer', delay: '0s'},
