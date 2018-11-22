@@ -1,1 +1,6 @@
-{{yield}}
+<h2>Projects</h2>
+<div class="project-list">
+  {{#each projects as |project|}}
+    {{project-item project=project}}
+  {{/each}}
+</div>
