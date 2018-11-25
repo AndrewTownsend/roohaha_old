@@ -1,16 +1,21 @@
 <span class="title-line">
-  <i class="project-icon {{project.icon}}" /><h3>{{project.name}}</h3> - {{project.status}}
+  <i class="project-icon {{project.icon}}" /><h3>{{project.name}}</h3>
+</span>
+<span class="status-line">
+  Status: <span class="status">{{project.status}}</span>
+</span>
+<span class="language-line">
+  Implemented in: <span class="language">{{project.language}}</span>
 </span>
 <p>{{project.description}}</p>
 <p>{{project.description2}}</p>
 <div class="get-it">
+  {{#if project.download}}
   <span class="download">
-    <i class="fas fa-download" />
-    {{#if project.download}}
-      <a href="{{project.download}}" target="_blank">Download!</a>
-    {{else}}
-      <span class="no-download">Download unavailable</span>
-    {{/if}}
+    <i class="fas fa-download" /> <a href="{{project.download}}" target="_blank">Download!</a>
   </span>
-  <span class="github"><i class="fas fa-code-branch" /><a href="{{project.git}}">{{project.git}}</a></span>
+  {{/if}}
+  {{#if project.git}}
+  <span class="github"><i class="fas fa-code-branch" /><a href="{{project.git}}">GitHub</a></span>
+  {{/if}}
 </div>

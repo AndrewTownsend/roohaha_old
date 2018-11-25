@@ -1,1 +1,31 @@
-{{yield}}
+<h2>Experience</h2>
+<div class="technical-skills">
+  <div class="day-to-day">
+    <h3>Day To Day Technologies</h3>
+    <ul>
+      {{#each dayToDayTech as |tech|}}
+        <li>{{icon-link link=tech.link text=tech.name}}</li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="learning">
+    <h3>Technologies I'm Learning</h3>
+    <ul>
+      {{#each learningTech as |tech|}}
+        <li>{{icon-link link=tech.link text=tech.name}}</li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="touched-before">
+    <h3>Technologies I've Touched in the Past</h3>
+    <ul>
+      {{#each usedInThePastTech as |tech|}}
+        <li>{{icon-link link=tech.link text=tech.name}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
+<h2>Employment History</h2>
+{{#each reversedEmploymentRecord as |job|}}
+  {{employer-grouping job=job}}
+{{/each}}

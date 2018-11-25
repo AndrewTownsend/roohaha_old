@@ -1,0 +1,11 @@
+<div class="employer" {{action "toggleOpen"}}>
+  <span class="title-line">{{job.employer}} - {{job.title}}</span>
+  <span class="dates">{{job.startDate}} - {{job.endDate}}</span>
+</div>
+<div class="details {{if open 'open'}}">
+  <ul>
+    {{#each job.details as |detail|}}
+      <li>{{detail}}</li>
+    {{/each}}
+  </ul>
+</div>
